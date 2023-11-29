@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> CỬA HÀNG QUẦN ÁO THỜI TRANG</h1>
+
+        </div>
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+                    <li>
+                        <a class="giohang" href="cart.html"><img src="images/cart.png"><span id="countsp">0</span></a>
+                    </li>
+                        
+            </ul>
+        </div>
+        <div class="row mb ">
+            <div class="boxtrai mr">
+                <div class="row">
+                    <div class="banner">
+                        <img src="images/banner-thoi-trang-dep_113856538.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="boxsp mr">
+                        <div class="row img"><img src="images/Ao-co-tron.jpg" alt=""></div>
+                        <p><span>150.000đ</span></p>
+                        <a href="#">Áo Nam Cổ Tròn</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp mr">
+                        <div class="row img"><img src="images/Ao-nam-co-co.jpg" alt=""></div>
+                        <p><span>139.000đ</span></p>
+                        <a href="#">Áo Nam Có Cổ</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp ">
+                        <div class="row img"><img src="images/quan-jean-nam2.webp" alt=""></div>
+                        <p><span>239.000đ</span></p>
+                        <a href="#">Quần Jean Nam</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp mr">
+                        <div class="row img"><img src="images/quan-short-nam-thun-the-thao-parpa-voi-duong-ke-ong-phai-xanh-den-gia-si.jpg" alt=""></div>
+                        <p><span>119.000đ</span></p>
+                        <a href="#">Quần Short Nam Thun</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp mr">
+                        <div class="row img"><img src="images/quan-tay-nu-cong-so-ong-dung-ong-suong.jpg" alt=""></div>
+                        <p><span>229.000đ</span></p>
+                        <a href="#">Quần Tây Công Sở Nữ</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp ">
+                        <div class="row img"><img src="images/quan-tay-nu-lung-cao-cap-lien.jpg" alt=""></div>
+                        <p><span>199.000đ</span></p>
+                        <a href="#">Quần Nữ Lưng Cao</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp mr">
+                        <div class="row img"><img src="images/so-mi-nu-tay-dai.jpg" alt=""></div>
+                        <p><span>149.000đ</span></p>
+                        <a href="#">Sơ Mi Nữ Tay Dài</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp mr">
+                        <div class="row img"><img src="images/so-mi-trang.jpg" alt=""></div>
+                        <p><span>239.000đ</span></p>
+                        <a href="#">Sơ Mi Nam Nữ Rộng</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                    <div class="boxsp ">
+                        <div class="row img"><img src="images/thun-nam-tay-dai.jpg" alt=""></div>
+                        <p><span>229.000đ</span></p>
+                        <a href="#">Áo Thun Nam Tay Dài</a>
+                        <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button>Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="boxphai">
+                <div class="row mb ">
+                    <div class="boxtitle">TÀI KHOẢN</div>
+                    <div class="boxcontent formtaikhoan">
+                        <form action="#" method="post">
+                            <div class="row mb10">
+                                Tên đăng nhập<br>
+                                <input type="text" name="user">
+                            </div>
+                            <div class="row mb10">
+                                Mật khẩu<br>
+                                
+                                <input type="password" name="pass">
+                            </div>
+                            <div class="row mb10">
+                                <input type="checkbox" name=""> Ghi nhớ tài khoản?</div>
+                                <div class="row mb10">
+                                    <input type="submit" value="Đăng nhập">
+                            </div>
+                        </form>
+                        <li>
+                            <a href="#">Quên mật khẩu</a>
+                        </li>
+                        <li>
+                            <a href="#">Đăng ký thành viên</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="row mb">
+                    <div class="boxtitle">DANH MỤC</div>
+                    <div class="boxcontent2 menudoc">
+                        <ul>
+                            <li>
+                                <a href="#">Áo Nam Cổ Tròn</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo Nam Có Cổ</a>
+                            </li>
+                            <li>
+                                <a href="#">Quần Jean Nam</a>
+                            </li>
+                            <li>
+                                <a href="#">Quần Short Nam Thun</a>
+                            </li>
+                            <li>
+                                <a href="#">Quần Tây Công Sở Nữ</a>
+                            </li>
+                            <li>
+                                <a href="#">Sơ Mi Nam Nữ Rộng</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo Thun Nam Tay Dài</a>
+                            </li>
+                            <li>
+                                <a href="#">Quần Nữ Lưng Cao</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="boxfooter searbox">
+                        <form action="#" method="post">
+                            <input type="text" name="" id="">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="boxtitle">TOP 10 YÊU THÍCH</div>
+                    <div class="row boxcontent">
+                        <div class="row mb10 top10">
+                            <img src="images/Ao-co-tron.jpg" alt="">
+                            <a href="#">Sir Rodney's Marmalade</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/Ao-nam-co-co.jpg" alt="">
+                            <a href="#">Cate de Blaye</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/quan-jean-nam2.webp" alt="">
+                            <a href="#">Tharinger Rostbratwurst</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/quan-short-nam-thun-the-thao-parpa-voi-duong-ke-ong-phai-xanh-den-gia-si.jpg" alt="">
+                            <a href="#">Mishi Kobe Niku</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/quan-tay-nu-cong-so-ong-dung-ong-suong.jpg" alt="">
+                            <a href="#">Sir Rodney's Marmalade</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/quan-tay-nu-lung-cao-cap-lien.jpg" alt="">
+                            <a href="#">Cate de Blaye</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/so-mi-trang.jpg" alt="">
+                            <a href="#">Tharinger Rostbratwurst</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/so-mi-nu-tay-dai.jpg" alt="">
+                            <a href="#">Mishi Kobe Niku</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb footer">
+            Copyright © 2023 - PHẠM THÀNH VINH FPT POLYTECHNIC
+        </div>
+    </div>
+
+</body>
+
+</html>
