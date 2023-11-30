@@ -15,7 +15,7 @@
                         <tr>
                             <td>Hình ảnh</td>
                             <td>
-                                <img src="<?=$product['image']?>">
+                                <img src="../view/images/<?=$product['img']?>">
                             </td>
                         </tr>
                         <tr>
@@ -37,7 +37,7 @@
                             <td>
                                 <form action="index.php?act=cart" method="post">
                                     <input type="number" name="soluong" min="1" max="10" value="1">
-                                    <input type="hidden" name="img" value="<?=$product['image']?>">
+                                    <input type="hidden" name="img" value="<?=$product['img']?>">
                                     <input type="hidden" name="tensp" value="<?=$product['name']?>">
                                     <input type="hidden" name="gia" value="<?=$product['price']?>">
                                     <input type="hidden" name="id" value="<?=$product['id']?>">
@@ -50,7 +50,7 @@
                     <h1>COMMENTS</h1>
                     <table class="thongtinnhanhang">
                     <?php
-                    if (isset($_SESSION['objuser'])) {
+                        if (isset($_SESSION['objuser'])) {
                     ?>
                     <form action="index.php?act=comment" method="POST">
                         <input type="hidden" name="product_id" value="<?=$product['id']?>">

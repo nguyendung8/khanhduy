@@ -25,7 +25,6 @@
             <li class="mb-2 noidung"><a class="text-white" href="index.php?act=home">Trang chủ</a></li>
                             <li class="mb-2 noidung"><a class="text-white" href="index.php?act=products">Quản lý sản phẩm</a></li>
                             <li class="mb-2 noidung"><a class="text-white" href="index.php?act=categories">Quản lý danh mục</a></li>
-                            <li class="mb-2 noidung"><a class="text-white" href="index.php?act=revenue">Quản lý khách hàng</a></li>
                             <li class="mb-2 noidung"><a class="text-white" href="index.php?act=users">Quản lý user</a></li>
                             <li class="mb-2 noidung"><a class="text-white" href="index.php?act=orders">Thống kê doanh thu</a></li>
                             <li class="mb-2 noidung"><a class="text-white" href="index.php?act=comment">Quản lý bình luận</a></li>

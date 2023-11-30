@@ -25,8 +25,8 @@
                         <tr>
                             <td>Hình ảnh</td>
                             <td>
-                                <input <?=$product['image']!='' ? '' : 'required'?> type="file" name="image" id="image">
-                                Hình ảnh cũ: <img src="<?=$product['image']?>">
+                                <input <?=$product['img']!='' ? '' : 'required'?> type="file" name="image" id="image">
+                                Hình ảnh cũ: <img src="<?=$product['img']?>">
                             </td>
                         </tr>
                         <tr>
@@ -41,14 +41,14 @@
                         </tr>
                         <tr>
                             <td>Số lượng</td>
-                            <td><input required type="number" name="quantity" id="quantity" value="<?=$product['quantity']?>"></td>
+                            <td><input required type="number" name="quantity" id="quantity" value="<?=$product['quality']?>"></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td><input type="submit" name="edit" value="Cập nhật"></td>
                         </tr>
                         <input type="hidden" name="id" value="<?=$product['id']?>">
-                        <input type="hidden" name="oldImage" value="<?=$product['image']?>">
+                        <input type="hidden" name="oldImage" value="<?=$product['img']?>">
                     </table>
                     </form>
                 </div>

@@ -29,11 +29,13 @@ if (isset($_GET['tk'])) {
                                 <form action="index.php?act=cart" method="post">
                                     <div class="product-item ">
                                         <div class="card">
-                                            <img src="../view/images/<?= $item['img'] ?>" class="card-img-top" alt="">
+                                           <img src="../view/images/<?= $item['img'] ?>" class="card-img-top" alt="">
                                             <div class="card-body">
-                                                <h5 class="card-title name-product">
-                                                    <?= $item['name'] ?>
-                                                </h5>
+                                                <a href="?act=chitietsp&id=<?= $item['id']?>">
+                                                    <h5 class="card-title name-product">
+                                                        <?= $item['name'] ?>
+                                                    </h5>
+                                                </a> 
                                                 <p class="card-text des-product">
                                                     <?= $item['description'] ?>
                                                 </p>

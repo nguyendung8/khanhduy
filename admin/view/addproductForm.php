@@ -10,22 +10,18 @@
                         <tr>
                             <td>danh mục sản phẩm</td>
                             <td>
-                                <input required id="cate" name="cate" >
+                                <input type="number" required id="cate" name="cate" >
                             </td>
                         </tr>
                         <tr>
                             <td>ảnh</td>
                             <td>
-                                <textarea required id="image" name="image" rows="4" cols="50"></textarea>
+                                <input type="file" required id="image" name="image" rows="4" cols="50"></input>
                             </td>
                         </tr>
                         <tr>
                             <td>giá</td>
                             <td><input required type="number" name="price" id="price" value=""></td>
-                        </tr>
-                        <tr>
-                            <td>kho</td>
-                            <td><input required type="number" name="stock" id="stock" value=""></td>
                         </tr>
                         <tr>
                             <td>mô tả</td>

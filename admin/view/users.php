@@ -1,24 +1,5 @@
 
 <div class="container">
-                    <div class="row justify-content-center mt-5">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tìm kiếm</h5>
-                                    <form action="index.php?act=products" method="GET">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" name="tk" placeholder="Nhập từ khóa tìm kiếm">
-                                            <input type="hidden" class="form-control" name="act" value="user">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="submit">Tìm</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -43,16 +24,16 @@
                                 {
                                     $conn=connectdb();
                                     $ten=$_GET['tk'];
-                                    $sql = "SELECT * FROM `users` WHERE `name` LIKE '%$ten%'";
+                                    $sql = "SELECT * FROM `user` WHERE `name` LIKE '%$ten%'";
                                     $stmt = $conn->prepare($sql);
                                     $stmt->execute();
                                     $stmt->setFetchMode(PDO::FETCH_ASSOC);
                                     $result = $stmt->fetchAll(); // Lấy 1 dòng
-                                    $listusers=$result;
+                                    $users=$result;
                                 }
                                 
         
-                                foreach($listusers as $item) {
+                                foreach($users as $item) {
                                 ?>
                                 <tr>
                                     <td><?=$item['id']?></td>

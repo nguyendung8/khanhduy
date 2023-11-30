@@ -24,17 +24,17 @@ if (isset($_GET['act'])) {
             include "../view/cart.php";
             break;
         case 'comment':
-            if ($_POST['submit']) {
+            if (isset($_POST['submit'])) {
                 $productId = isset($_POST['product_id']) ? $_POST['product_id'] : 'n/a';
                 $comment = isset($_POST['comment']) ? $_POST['comment'] : 'n/a';
                 if (isset($_SESSION['objuser']['user_id']) && $productId) {
+                    var_dump($comment);
                     addComment($_SESSION['objuser']['user_id'], $productId, $comment);
-                    header("Location: index.php?act=product-detail&id=" . $productId);
+                    header("Location: index.php?act=chitietsp&id=" . $productId);
                 }
             } else {
                 header("Location: index.php");
             }
-
             break;
         case 'del-cart':
             //lấy giá trị
@@ -62,7 +62,7 @@ if (isset($_GET['act'])) {
         case 'chitietsp':
             $id = $_GET['id'];
             $product = getOneProduct($id);
-            $category = getOneCategory($product['category_id']);
+            $category = getOneCategory($product['id_category']);
             include "../view/chitietsp.php";
             break;
         case 'signup':

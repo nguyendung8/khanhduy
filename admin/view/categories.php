@@ -66,7 +66,7 @@
                     </table>
                 </div>
                 <div class="row mb10 mt-3">
-                <a href="index.php?act=addCategory"><input type="button" class="btn btn-primary" value="Thêm Danh Mục"></a>
+                    <a href="index.php?act=addCategory"><input type="button" class="btn btn-primary" value="Thêm Danh Mục"></a>
                 </div>
             </div>
         </div>

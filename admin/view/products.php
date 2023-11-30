@@ -26,7 +26,9 @@
             <div class="row frmtitle">
                 <h1 class="mt-3">DANH SÁCH SẢN PHẨM</h1>
             </div>
-
+            <div class="row mb-10 mt-3">
+                    <a href="index.php?act=addProduct" class="btn btn-primary">Thêm sản phẩm</a>
+            </div>
             <div class="row frmcontent">
                 <div class="row mb-10 frmdssanpham">
                     <table class="table">
@@ -63,9 +65,6 @@
                         }
                         ?>
                     </table>
-                </div>
-                <div class="row mb-10 mt-3">
-                    <a href="index.php?act=addProduct" class="btn btn-primary">Thêm sản phẩm</a>
                 </div>
             </div>
         </div>

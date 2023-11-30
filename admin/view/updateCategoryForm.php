@@ -8,12 +8,6 @@
                             <td><input required type="text" name="name" id="name" value="<?=$category['name']?>"></td>
                         </tr>
                         <tr>
-                            <td>Mô tả</td>
-                            <td>
-                                <textarea required id="description" name="description" rows="4" cols="50"><?=$category['description']?></textarea>
-                            </td>
-                        </tr>
-                        <tr>
                             <td>Vị trí</td>
                             <td><input required type="number" name="position" id="position" value="<?=$category['position']?>"></td>
                         </tr>

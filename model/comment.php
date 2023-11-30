@@ -1,8 +1,7 @@
 <?php
-function getAllComments($userId, $productId) {
+function getAllComments() {
     $conn=connectdb();
-    $sql = "SELECT * FROM `comments` WHERE user_id = '".$userId."' 
-    AND product_id = '".$productId."'";
+    $sql = "SELECT * FROM `comments`";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -12,7 +11,12 @@ function getAllComments($userId, $productId) {
 
 function addComment($userId, $productId, $comment) {
     $conn=connectdb();
-    $sql = "INSERT INTO comments (`user_id`, `product_id`, `comment`) VALUES ('".$userId."', '".$productId."', '".$comment."')";
+    $sql = "INSERT INTO comments (`id_user`, `id_product`, `comment`) VALUES ('".$userId."', '".$productId."', '".$comment."')";
+    $conn->exec($sql);
+}
+function deleteComment($id) {
+    $conn=connectdb();
+    $sql = "DELETE FROM comments WHERE `comments`.`id` = " . $id;
     $conn->exec($sql);
 }
 ?>

@@ -10,7 +10,7 @@ function login()
     $userInfo = checkUser($user, $pass);
     if ($userInfo) {
       //tạo mảng
-      $objuser = array("name" => $userInfo['name'], "role" => $userInfo['is_admin']);
+      $objuser = array("user_id" => $userInfo['id'], "name" => $userInfo['name'], "role" => $userInfo['is_admin']);
       //lưu session
       $_SESSION['objuser'] = $objuser;
       //chuyển trang
@@ -51,6 +51,12 @@ function addUser($username, $password)
   return $conn->lastInsertId();
 }
 
+function deleteUser($id) {
+  $conn=connectdb();
+  $sql = "DELETE FROM user WHERE `user`.`id` = " . $id;
+  $conn->exec($sql);
+}
+
 function forgot()
 {
   if (isset($_POST['forgot']) && ($_POST['forgot'])) {
@@ -88,6 +94,28 @@ function check($user)
   if ($result) return $result;
   else return 0;
 }
-
+function getAllUsers() {
+  $conn=connectdb();
+  $sql = "SELECT * FROM `user` where is_admin = 0";
+  $stmt = $conn->prepare($sql);
+  $stmt->execute();
+  $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  $kq=$stmt->fetchAll(); // lấy nhiều dòng
+  return $kq;
+}
+function getOneUser($id) {
+  $conn=connectdb();
+  $sql = "SELECT * FROM `user` WHERE id = " . $id;
+  $stmt = $conn->prepare($sql);
+  $stmt->execute();
+  $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  $result = $stmt->fetch(); // Lấy 1 dòng
+  return $result;
+}
+function updateUser($id, $name, $email) {
+  $conn=connectdb();
+  $sql = "UPDATE `user` SET `name` = '".$name."', `email` = '".$email."' WHERE `user`.`id` = " . $id;
+  $conn->exec($sql);
+}
 ob_end_flush();
 ?>

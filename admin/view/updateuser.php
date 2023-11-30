@@ -12,12 +12,6 @@
                         <td width="20%">Email</td>
                             <td><input required type="email" name="email" id="name" value="<?=$edituser['email']?>"></td>
                         </tr>
-                        <tr>
-                        <td width="20%">Password</td>
-                            <td><input required type="password" name="password" id="name" value="<?=$edituser['password']?>"></td>
-                        </tr>
-                        
-                        <tr>
                             <td></td>
                             <td><input type="submit" name="edit" value="Cập nhật"></td>
                         </tr>

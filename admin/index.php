@@ -10,6 +10,7 @@ if(isset($_SESSION['objuser']) && ($_SESSION['objuser']['role'] == 1)){
     include "../model/order.php";
     include "../model/statistic.php";
     include "../model/products.php";
+    include "../model/comment.php";
     // đầu html
     include "view/menu.php";
     // body
@@ -103,7 +104,53 @@ if(isset($_SESSION['objuser']) && ($_SESSION['objuser']['role'] == 1)){
                 $orders=getAllOrders();
                     include "view/orders.php";
                 break;
-            
+            case 'comment':
+                $comments=getAllComments();
+                    include "view/comments.php";
+                break;
+            case 'deleteComment':
+                $id = $_GET['id'];
+                // gọi hàm delete comment
+                deleteComment($id);
+                header('location: index.php?act=comment');
+                break;
+            case 'users':
+                $users=getAllUsers();
+                    include "view/users.php";
+                break;
+            case 'adduser':
+                // Lấy data từ form
+                include "./view/adduserForm.php";
+                if (isset($_POST['add']) && ($_POST['add'])) {
+                    $username = $_POST['username'];
+                    $password = md5( $_POST['password']);
+                    $result = addUser($username, $password);
+                    // gọi hàm thêm user
+                    if ($result) echo 'Chúc mừng bạn đã đăng ký thành công';
+                    else echo 'Bạn đăng ký không thành công';
+                }
+                break;
+            case 'deleteuser':
+                $id = $_GET['id'];
+                // gọi hàm delete user
+                deleteUser($id);
+                header('location: index.php?act=users');
+                break;
+            case 'updateuser':
+                if(isset($_POST['edit'])&&($_POST['edit'])){
+                    // Lấy data từ form
+                    $id = $_POST['id'];
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    // gọi hàm update category
+                    updateUser($id, $name, $email);
+                    header('location: index.php?act=users');
+                } else {
+                    $id = $_GET['id'];
+                    $edituser = getOneUser($id);
+                    include "view/updateuser.php";
+                }
+                break;
             case 'detail':
                     $id=$_GET['id'];
                     // $order = getOneOrder($id);
@@ -127,10 +174,9 @@ if(isset($_SESSION['objuser']) && ($_SESSION['objuser']['role'] == 1)){
                 // Lấy data từ form
                 if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
                     $name = $_POST['name'];
-                    $description=$_POST['description'];
                     $position=$_POST['position'];
                     // gọi hàm thêm category
-                    addCategory($name, $description, $position);
+                    addCategory($name, $position);
                     header('location: index.php?act=categories');
                 } else {
                     include "view/addCategoryForm.php";
@@ -142,10 +188,9 @@ if(isset($_SESSION['objuser']) && ($_SESSION['objuser']['role'] == 1)){
                         // Lấy data từ form
                         $id = $_POST['id'];
                         $name = $_POST['name'];
-                        $description=$_POST['description'];
                         $position=$_POST['position'];
                         // gọi hàm update category
-                        updateCategory($id, $name, $description, $position);
+                        updateCategory($id, $name, $position);
                         header('location: index.php?act=categories');
                     } else {
                         $id = $_GET['id'];

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
   <title>Shop Thời Trang</title>
   <link rel="stylesheet" href="../view/css/style6.css">
-
 </head>
 
 <body>

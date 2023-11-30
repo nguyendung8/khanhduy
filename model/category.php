@@ -19,15 +19,15 @@ function getOneCategory($id) {
     return $result;
 }
 
-function addCategory($name, $description, $position) {
+function addCategory($name, $position) {
     $conn=connectdb();
-    $sql = "INSERT INTO categories (`name`, `description`, `position`) VALUES ('".$name."', '".$description."', '".$position."')";
+    $sql = "INSERT INTO categories (`name`, `position`) VALUES ('".$name."', '".$position."')";
     $conn->exec($sql);
 }
 
-function updateCategory($id, $name, $description, $position) {
+function updateCategory($id, $name, $position) {
     $conn=connectdb();
-    $sql = "UPDATE `categories` SET `name` = '".$name."', `description` = '".$description."', `position` = '".$position."' WHERE `categories`.`id` = " . $id;
+    $sql = "UPDATE `categories` SET `name` = '".$name."', `position` = '".$position."' WHERE `categories`.`id` = " . $id;
     $conn->exec($sql);
 }
 

@@ -8,12 +8,6 @@
                             <td><input required type="text" name="name" id="name" value=""></td>
                         </tr>
                         <tr>
-                            <td>Mô tả</td>
-                            <td>
-                                <textarea required id="description" name="description" rows="4" cols="50"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
                             <td>Vị trí</td>
                             <td><input required type="number" name="position" id="position" value=""></td>
                         </tr>

@@ -21,9 +21,9 @@ function producstList($categoryId = 0){
     $conn->exec($sql);
   }
 
-  function addProduct($category_id, $name, $description, $price, $quantity, $image) {
+  function addProduct($name, $category_id, $description, $price, $quantity, $image) {
     $conn=connectdb();
-    $sql = "INSERT INTO `products` (`category_id`, ` , `description`, `price`, `quantity`, `image`) VALUES ('".$category_id."', '".$name."', '".$description."', '".$price."', '".$quantity."', '".$image."')";
+    $sql = "INSERT INTO `products` (name, id_category, description, price, quality, img) VALUES('$name', '$category_id', '$description', '$price', '$quantity', '$image')";
     $conn->exec($sql);
   }
 
@@ -50,12 +50,12 @@ function producstList($categoryId = 0){
 }
 function updateProduct($id, $category_id, $name, $description, $price , $quantity, $image) {
   $conn=connectdb();
-    $sql = "UPDATE products SET `category_id`='".$category_id."', 
+    $sql = "UPDATE products SET `id_category`='".$category_id."', 
     `name` = '".$name."',
     `description` = '".$description."',
     `price` = '".$price."',
-    `quantity` = '".$quantity."',
-    `image` = '".$image."'
+    `quality` = '".$quantity."',
+    `img` = '".$image."'
      WHERE id=".$id;
     // Prepare statement
     $stmt = $conn->prepare($sql);
